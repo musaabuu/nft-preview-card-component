@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Outfit;
+    src: url("Font/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .25s;
+}
+
+:root {
+    /* Primary */
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+body {
+    font-family: Outfit;
+    color: var(--blue);
+    background: var(--main-bg);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-weight: 200;
+}
+
+h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.container {
+    background: var(--card-bg);
+    max-width: 21rem;
+    padding: 1.25rem;
+    border-radius: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+@media (min-width: 650px) {
+    .container {
+        box-shadow: 0px 0px 128px 4px rgb(0 0 0 / .3);
+    }
+}
+
+.hero {
+    position: relative;
+    border-radius: .5rem;
+}
+
+.hero > .view {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: none;
+}
+
+.hero:hover .view {
+    display: block;
+}
+
+.hero:hover {
+    z-index: 1;
+    background-color: var(--cyan);
+}
+
+.hero:hover img:last-child {
+    opacity: 0.5;
+}
+
+.hero img {
+    display: flex;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.nft {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+}
+
+.info > * {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.eth {
+    color: var(--cyan);
+}
+
+.eth p {
+    font-weight: 500;
+}
+
+.clock p {
+    font-weight: 400;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.creator {
+    color: white;
+}
+
+.creator:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.creator span {
+    color: var(--blue);
+    font-weight: 300;
+}
+
+.avatar img {
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 2rem;
+    aspect-ratio: 1;
+}
